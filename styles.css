@@ -252,75 +252,10 @@ body {
 }
 
 /* Signature Styles */
-.signature {
-    display: flex;
-    align-items: center;
-    gap: 0;
+.signature-wrapper table {
     background: white;
-    padding: 16px 20px;
-    border-radius: 4px;
-    font-family: Arial, Helvetica, sans-serif;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    max-width: 100%;
-}
-
-.signature-logo {
-    display: flex;
-    align-items: center;
-    padding-right: 16px;
-}
-
-.signature-logo img {
-    height: 55px;
-    width: auto;
-}
-
-.signature-divider {
-    width: 2px;
-    height: 60px;
-    background: #1a1a1a;
-    margin: 0 16px;
-}
-
-.signature-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-}
-
-.signature-nome {
-    font-size: 14px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 0;
-    line-height: 1.4;
-}
-
-.signature-setor {
-    font-size: 12px;
-    font-weight: 400;
-    color: #333;
-    margin: 0;
-    line-height: 1.4;
-}
-
-.signature-telefone {
-    font-size: 12px;
-    font-weight: 400;
-    color: #333;
-    margin: 0;
-    line-height: 1.4;
-}
-
-.signature-site {
-    font-size: 12px;
-    margin: 0;
-    line-height: 1.4;
-}
-
-.signature-site a {
-    color: #0066cc;
-    text-decoration: underline;
+    border-radius: 4px;
 }
 
 /* Copy Button */
@@ -429,28 +364,7 @@ body {
 
     .signature-wrapper {
         padding: 20px;
-    }
-
-    .signature {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        gap: 16px;
-        padding: 20px;
-    }
-
-    .signature-logo {
-        padding-right: 0;
-    }
-
-    .signature-divider {
-        width: 80%;
-        height: 2px;
-        margin: 8px 0;
-    }
-
-    .signature-content {
-        align-items: center;
+        overflow-x: auto;
     }
 }
 
