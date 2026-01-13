@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update sector - always append " | Sesc Pinheiros" if there's content
         const setor = setorInput.value.trim();
-        previewSetor.textContent = setor ? `${setor} | Sesc Pinheiros` : '';
+        previewSetor.textContent = setor ? `${setor} | Sesc Pinheiros` : '<Setor> | Sesc Pinheiros';
 
         // Update extension
         const ramal = ramalInput.value.trim();
