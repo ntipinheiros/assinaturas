@@ -1,0 +1,487 @@
+/* ========================================
+   SESC Signature Generator - Styles
+   ======================================== */
+
+/* CSS Variables */
+:root {
+    --primary-color: #1a1a2e;
+    --secondary-color: #16213e;
+    --accent-color: #0f3460;
+    --highlight-color: #e94560;
+    --success-color: #00c853;
+    --text-primary: #1a1a2e;
+    --text-secondary: #5a5a7a;
+    --text-light: #8a8aaa;
+    --bg-gradient-start: #f8f9ff;
+    --bg-gradient-end: #e8ecf8;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --card-shadow: 0 10px 40px rgba(26, 26, 46, 0.1);
+    --card-shadow-hover: 0 20px 60px rgba(26, 26, 46, 0.15);
+    --border-radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    min-height: 100vh;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.header-text p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* Main Content */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.main-content>section {
+    display: flex;
+}
+
+.main-content .card {
+    flex: 1;
+}
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-icon {
+    font-size: 1.5rem;
+}
+
+.card-header h2 {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 28px;
+}
+
+/* Form Styles */
+.form-section .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+}
+
+.form-group input {
+    padding: 14px 18px;
+    border: 2px solid #e8ecf8;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+    background: #fafbff;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(15, 52, 96, 0.1);
+}
+
+.form-group input::placeholder {
+    color: var(--text-light);
+}
+
+.input-hint {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Prefix Input */
+.input-prefix-wrapper {
+    display: flex;
+    align-items: center;
+    border: 2px solid #e8ecf8;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fafbff;
+    transition: var(--transition);
+}
+
+.input-prefix-wrapper:focus-within {
+    border-color: var(--accent-color);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(15, 52, 96, 0.1);
+}
+
+.input-prefix {
+    padding: 14px 16px;
+    background: #f0f2fa;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-right: 2px solid #e8ecf8;
+    white-space: nowrap;
+}
+
+.input-prefix-wrapper input {
+    border: none;
+    background: transparent;
+    flex: 1;
+    padding: 14px 16px;
+}
+
+.input-prefix-wrapper input:focus {
+    box-shadow: none;
+}
+
+/* Preview Section */
+.preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.preview-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.signature-wrapper {
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(135deg, #fafbff, #f5f7ff);
+    border-radius: 12px;
+    border: 2px dashed #d0d8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Signature Styles */
+.signature {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: white;
+    padding: 16px 20px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 100%;
+}
+
+.signature-logo {
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+}
+
+.signature-logo img {
+    height: 55px;
+    width: auto;
+}
+
+.signature-divider {
+    width: 2px;
+    height: 60px;
+    background: #1a1a1a;
+    margin: 0 16px;
+}
+
+.signature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.signature-nome {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.signature-setor {
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.signature-telefone {
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.signature-site {
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.signature-site a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+/* Copy Button */
+.btn-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(26, 26, 46, 0.3);
+}
+
+.btn-copy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(26, 26, 46, 0.4);
+}
+
+.btn-copy:active {
+    transform: translateY(0);
+}
+
+.btn-icon {
+    font-size: 1.2rem;
+}
+
+.copy-hint {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-align: center;
+    max-width: 280px;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: linear-gradient(135deg, #00c853, #00a844);
+    color: white;
+    padding: 18px 28px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 40px rgba(0, 200, 83, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    font-weight: 500;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast-icon {
+    background: rgba(255, 255, 255, 0.2);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.toast-message {
+    font-size: 0.95rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: auto;
+}
+
+.footer p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .signature-wrapper {
+        padding: 20px;
+    }
+
+    .signature {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .signature-logo {
+        padding-right: 0;
+    }
+
+    .signature-divider {
+        width: 80%;
+        height: 2px;
+        margin: 8px 0;
+    }
+
+    .signature-content {
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 12px;
+    }
+
+    .header {
+        padding: 24px 12px;
+    }
+
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-text p {
+        font-size: 0.95rem;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .input-prefix {
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+
+    .btn-copy {
+        width: 100%;
+        padding: 14px 24px;
+    }
+}
