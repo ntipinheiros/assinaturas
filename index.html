@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Assinaturas - SESC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Form Section -->
+            <section class="form-section">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">✏️</span>
+                        <h2>Dados da Assinatura</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" placeholder="Digite seu nome aqui" autocomplete="off">
+                            <span class="input-hint">Digite seu nome completo</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="setor">Setor</label>
+                            <input type="text" id="setor" placeholder="Ex: Programação" autocomplete="off">
+                            <span class="input-hint">Informe seu setor</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="ramal">Ramal</label>
+                            <div class="input-prefix-wrapper">
+                                <span class="input-prefix">+55 11 3095</span>
+                                <input type="text" id="ramal" placeholder="0000" maxlength="4" autocomplete="off">
+                            </div>
+                            <span class="input-hint">Apenas os 4 dígitos do ramal</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Preview Section -->
+            <section class="preview-section">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">🔍</span>
+                        <h2>Pré-visualização</h2>
+                    </div>
+                    <div class="card-body preview-container">
+                        <div class="preview-label">Sua assinatura aparecerá assim:</div>
+
+                        <!-- Signature Preview -->
+                        <div class="signature-wrapper">
+                            <table id="signature" cellpadding="0" cellspacing="0" border="0" width="500"
+                                style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-family: Arial, Helvetica, sans-serif; background-color: #ffffff; width: 500px;">
+                                <tr>
+                                    <td width="200" valign="middle"
+                                        style="vertical-align: middle; padding: 0; padding-right: 14px; width: 200px;">
+                                        <img src="https://ntipinheiros.github.io/assinaturas/logo_sesc80.jpg"
+                                            alt="SESC Logo" width="200" height="89"
+                                            style="width: 200px; height: 89px; display: block; border: 0; outline: none; -ms-interpolation-mode: bicubic;">
+                                    </td>
+                                    <td width="280" valign="top"
+                                        style="vertical-align: top; padding: 4px 16px; border-left: 2px solid #1a1a1a; width: 280px;">
+                                        <p id="preview-nome"
+                                            style="margin: 0; padding: 0; font-size: 16px; font-weight: bold; color: #1a1a1a; line-height: 22px; font-family: Arial, Helvetica, sans-serif;">
+                                        </p>
+                                        <p id="preview-setor"
+                                            style="margin: 0; padding: 0; font-size: 13px; font-weight: normal; color: #333333; line-height: 20px; font-family: Arial, Helvetica, sans-serif;">
+                                            Sesc Pinheiros</p>
+                                        <p
+                                            style="margin: 0; padding: 0; font-size: 13px; font-weight: normal; color: #333333; line-height: 20px; white-space: nowrap; font-family: Arial, Helvetica, sans-serif;">
+                                            Tel.: +55 11 3095 <span id="preview-ramal"></span></p>
+                                        <p style="margin: 0; padding: 0; font-size: 13px; line-height: 20px; font-family: Arial, Helvetica, sans-serif;"><a
+                                                href="https://sescsp.org.br" target="_blank"
+                                                style="color: #0066cc; text-decoration: underline; font-family: Arial, Helvetica, sans-serif;">sescsp.org.br</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Copy Button -->
+                        <button id="btn-copiar" class="btn-copy">
+                            <span class="btn-icon">📋</span>
+                            Copiar Assinatura
+                        </button>
+                        <p class="copy-hint">A assinatura será copiada pronta para colar no Microsoft Outlook</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-message">Assinatura copiada! Agora você pode colar no Microsoft Outlook.</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
